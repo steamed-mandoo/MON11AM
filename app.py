@@ -1,7 +1,3 @@
-! pip install dash
-! pip install pandas
-! pip install folium
-
 import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output, State
