@@ -36,6 +36,7 @@ for path in image_paths:
 
 # 대시보드 애플리케이션 생성
 app = dash.Dash(__name__)
+server = app.server
 
 # 드롭다운 메뉴의 스타일 설정을 위한 딕셔너리
 dropdown_style = {'width': '50%', 'color': '#000000', 'margin': '10px'}
