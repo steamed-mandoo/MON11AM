@@ -44,7 +44,7 @@ dropdown_style = {'width': '50%', 'color': '#000000', 'margin': '10px'}
 initial_map = folium.Map(location=[37.5665, 126.9780], zoom_start=12)
 
 # 여행 계획 탭 생성 함수
-def travel_planner_tab():
+def travel_planner_tab_content():
     return dcc.Tab(label='본론', children=[
         html.H1("🥔여행코스 짜드립니다. 단돈 이찬원...~ᕕ( ᐛ )ᕗ"),
 
@@ -130,13 +130,13 @@ def travel_planner_tab():
 app.layout = html.Div([
     html.H1("여행 플래너 및 추가 기능 대시보드"),
     dcc.Tabs([
-        dcc.Tab(label='여행 플래너', children=[travel_planner_tab_content()]),
-        dcc.Tab(label='추가 기능', children=additional_features_tab())
+        dcc.Tab(label='여행 플래너', children=[travel_planner_tab_content_content()]),
+        dcc.Tab(label='추가 기능', children=additional_features_tab_content())
     ])
 ])
 
 # 추가 기능 탭 생성 함수
-def additional_features_tab():
+def additional_features_tab_content():
     return dcc.Tab(label='추가 설명', children=[
         html.H1("Additional Features"),
         html.Div([
@@ -178,8 +178,8 @@ def additional_features_tab():
 # 앱 레이아웃 구성
 app.layout = html.Div([
     dcc.Tabs([
-        travel_planner_tab(),
-        additional_features_tab()
+        travel_planner_tab_content(),
+        additional_features_tab_content()
     ])
 ])
 
